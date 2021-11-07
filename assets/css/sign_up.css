@@ -1,0 +1,34 @@
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px; }
+  .container h1 {
+    margin: 0;
+    margin-bottom: 60px; }
+
+.form-container {
+  padding: 0; }
+  .form-container input {
+    display: block;
+    background-color: #E4E6E9;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 30px;
+    width: 60%;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 30px; }
+  .form-container button {
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 60px;
+    font-size: 16px;
+    background-color: #1B5BFF;
+    color: white;
+    cursor: pointer; }
+  .form-container a {
+    color: #1B5BFF;
+    font-weight: bold;
+    text-decoration: none; }
