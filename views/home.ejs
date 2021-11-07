@@ -1,9 +1,51 @@
     <link rel="stylesheet" href="/css/home_layout.css">
-    <h1>Welcome to Codeial <%= title %></h1>
 
     <div class="form-container">
-        <form action="" id="post-creation-form" method="post">
-            <textarea name="create-post" id="create-post" cols="30" rows="3" placeholder="Enter text here...."></textarea>
-            <input type="submit" value="post">
-        </form>
+        <h1>Welcome to Codeial <%= title %></h1>
+        <% if(locals.user){ %> 
+            <div class="form-input-container">
+                <form action="/posts/create" id="post-creation-form" method="post">
+                    <textarea name="content" id="create-post"  placeholder="Enter text here...." required></textarea>
+                    <input type="submit" value="post">
+                </form>
+            </div>
+        <% } %>
     </div>
+    
+    <% for(post of posts) { %>
+        <div class="posts-container">
+            <div class="user-details-container">
+                <div class="user-details">
+                    <div class="profile-pic"></div>
+                    <div class="user-name">
+                        <span><%= post.user.name %></span>
+                    </div>
+                </div>
+                <div class="creation-time">
+                    <span><%= post.createdAt %></span>
+                </div>
+            </div>
+            <p><%= post.content %></p>
+            <div class="post-comments">
+                <% if(locals.user) { %>
+                    <form action="/comments/create" method="post">
+                        <input type="text" name="content" placeholder="Type here to add comment..." required>
+                        <input type="hidden" name="post" value="<%= post._id %>">
+                        <input type="submit" value="Add Comment">
+                    </form>
+                <% } %>
+                <div class="comments-container">
+                    <% for(comment of post.comments){%> 
+                        <p><%= comment.content %></p>
+                        <p><%= comment.user.name %></p>
+                    <%}%>
+                    
+                </div>
+            </div>
+        </div>
+    <% } %>   
+    
+
+    
+
+    

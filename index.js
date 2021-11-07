@@ -38,9 +38,9 @@ app.use(session({
     secret: 'mysecretkey',
     saveUninitialized: false,
     resave: false,
-    cookie: {
-        maxAge: (1000*60*10)
-    },
+    // cookie: {
+    //     maxAge: (1000*60*10)
+    // },
     store: new MongoStore(
         {
             mongoUrl: 'mongodb://localhost:27017/codeial_development',

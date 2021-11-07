@@ -6,10 +6,8 @@ body {
   background-color: #e6eeff; }
 
 main {
-  padding: 30px 25px;
-  min-height: 100%;
-  background-color: white;
-  max-width: 1440px;
+  min-height: 70vh;
+  max-width: 1000px;
   margin: 30px auto; }
 
 a {
@@ -17,7 +15,7 @@ a {
   text-decoration: none; }
 
 nav {
-  padding: 15px 25px;
+  padding: 15px 60px;
   background-color: #1B5BFF;
   display: flex;
   justify-content: space-between;
@@ -32,14 +30,12 @@ nav {
 
 footer {
   background-color: #0f0f0f;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 15px 0; }
   footer h1 {
-    margin-inline: 25px; }
+    margin-inline: 60px; }
   footer ul {
     list-style: none;
     height: 120px;
@@ -50,3 +46,52 @@ footer {
     margin: 0; }
     footer ul li {
       margin: 10px 20px; }
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px; }
+  .form-container textarea {
+    margin: 30px 0 20px;
+    background-color: #E4E6E9;
+    border: none;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 10px; }
+  .form-container input[type="submit"] {
+    background-color: #1B5BFF;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 50px;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer; }
+
+.posts-container {
+  background-color: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px; }
+  .posts-container .user-details-container {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px; }
+    .posts-container .user-details-container .user-details {
+      display: flex;
+      align-items: center;
+      font-weight: bold; }
+  .posts-container .profile-pic {
+    background-color: #bdbdbd;
+    height: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-right: 15px; }
+  .posts-container p {
+    margin: 0; }
